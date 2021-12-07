@@ -7,7 +7,7 @@ stages:
             inputs:
                ServiceNowConnection: 'myservice'
                ChangeRequestNumber: 'CHG0030881'
-               NewStatus: '3'
+               NewStatus: 'closed'
                CloseCode: 'successful'
                CloseNotes: 'cr approved'
 pool: server
