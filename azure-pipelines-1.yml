@@ -1,0 +1,12 @@
+stages:
+  - stage: Stage1
+    jobs:
+      - deployment: DeployLatest
+        environment: rtdrtdtrd
+      - job: UpdateChangeRequest
+        steps:
+         - task: UpdateServiceNowChangeRequest@2
+           inputs:
+             ServiceNowConnection: 'myservice'
+             ChangeRequestNumber: 'CHG0030603'
+             NewStatus: '3'
