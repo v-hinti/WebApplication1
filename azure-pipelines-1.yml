@@ -1,7 +1,6 @@
 stages:
   - stage: Stage1
     jobs:
-      - deployment: DeployLatest
       - job: UpdateChangeRequest
         steps:
           - task: UpdateServiceNowChangeRequest@2
