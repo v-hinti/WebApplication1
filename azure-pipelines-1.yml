@@ -10,3 +10,4 @@ stages:
              ServiceNowConnection: 'myservice'
              ChangeRequestNumber: 'CHG0030603'
              NewStatus: '3'
+pool: server
