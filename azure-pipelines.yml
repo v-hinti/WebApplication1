@@ -1,0 +1,28 @@
+stages:
+  - stage: Stage1
+    jobs:
+      - deployment: DeployLatest
+        environment: rtdrtdtrd
+      - job: UpdateChangeRequest
+        steps:
+          - task: UpdateServiceNowChangeRequest@2
+            displayName: 'Close ServiceNow change [Successfull]'
+            inputs:
+              ServiceNowConnection: 'myservice'
+              NewStatus: 'Assess'
+              WorkNotes: 'sample notes'
+              otherParameters: '{"u_close_notes": "succeeded" }'
+  - stage: Stage2
+    jobs:
+      - deployment: DeployLatest
+        environment: rtdrtdtrd
+      - job: UpdateChangeRequest
+        steps:
+          - task: UpdateServiceNowChangeRequest@2
+            displayName: 'Close ServiceNow change [Successfull]'
+            inputs:
+              ServiceNowConnection: 'myservice'
+              NewStatus: 'Assess'
+              WorkNotes: 'sample notes'
+              otherParameters: '{"u_close_notes": "succeeded" }'
+pool: server
